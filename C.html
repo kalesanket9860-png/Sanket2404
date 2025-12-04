@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>C Program Code</title>
+
+    <style>
+h2.{ 
+    font-family:Bell MT;
+    color:black;
+    pading:15px;
+}
+        p {
+            background-color: black;
+            color: white;
+            padding: 15px;
+            font-family: monospace;
+            white-space: pre; /* keeps formatting */
+        }
+    </style>
+
+</head>
+<body>
+
+<h2>C PROGRAM  OF THE  LOAN PREDICTOR WHICH I MADE FOR CFP PRESENNTATION.</h2>
+
+
+<p>
+
+#include &lt;stdio.h&gt;
+int main()
+{
+    float salary, expenses;
+    int age, creditScore;
+    int riskLevel;
+
+    printf("Enter your monthly salary: ");
+    scanf("%f", &salary);
+
+    printf("Enter your monthly expenses: ");
+    scanf("%f", &expenses);
+
+    printf("Enter your age: ");
+    scanf("%d", &age);
+
+    printf("Enter your credit score (300 - 900): ");
+    scanf("%d", &creditScore);
+
+    float savings = salary - expenses;
+
+    if (creditScore &lt; 500) {
+        riskLevel = 3;
+    }
+    else if (creditScore &gt;= 500 && creditScore &lt; 700) {
+        if (savings &lt; (0.2 * salary)) {
+            riskLevel = 3;
+        } else {
+            riskLevel = 2;
+        }
+    }
+    else if (creditScore &gt;= 700) {
+        if (savings &gt;= (0.3 * salary) && age &gt;= 21 && age &lt;= 60)
+            riskLevel = 1;
+        else
+            riskLevel = 2;
+    }
+
+    printf("\n------ Result ------\n");
+
+    switch (riskLevel) {
+        case 1:
+            printf("Loan Risk Level: LOW\n");
+            printf("Reason: Good credit score, stable savings, and eligible age.\n");
+        break;
+
+        case 2:
+            printf("Loan Risk Level: MEDIUM\n");
+            printf("Reason: Moderate credit score or low savings.\n");
+        break;
+
+        case 3:
+            printf("Loan Risk Level: HIGH\n");
+            printf("Reason: Low credit score or insufficient savings.\n");
+        break;
+
+        default:
+            printf("Error: Invalid risk level.\n");
+    }
+
+    return 0;
+}
+</p>
+<a href="https://www.onlinegdb.com/tTk8fF75iG">Click Here</a>
+</body>
+</html>
