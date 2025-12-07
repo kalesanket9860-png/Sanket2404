@@ -1,157 +1,185 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Home | My Website</title>
+    <title>Sanket | Personal Website</title>
 
-    <!-- INTERNAL CSS -->
     <style>
         body {
+            margin: 0;
             font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background: #f2f2f2;
+            background: #f4f7f9;
         }
 
-        h1, h2 {
-            color: #2b2b2b;
-        }
-
-        h1 {
-            background: #4b79a1;
-            color: white;
+        /* NAVIGATION */
+        nav {
+            background: #283593;
             padding: 15px;
-            margin: 0;
+            text-align: center;
         }
 
+        nav a {
+            color: white;
+            margin: 0 20px;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #ffeb3b;
+        }
+
+        /* HEADER SECTION */
+        header {
+            background: linear-gradient(#3f51b5, #1a237e);
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 40px;
+        }
+
+        header p {
+            font-size: 20px;
+            opacity: 0.9;
+        }
+
+        /* CONTENT SECTIONS */
         .section {
             width: 80%;
-            margin: auto;
+            margin: 30px auto;
             background: white;
-            padding: 20px;
-            margin-top: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px #d3d3d3;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 0 12px #d3d3d3;
         }
 
-        .skills-table {
-            width: 70%;
-            margin: auto;
+        h2 {
+            color: #283593;
         }
 
-        img {
-            border-radius: 10px;
-            box-shadow: 0 0 8px #bbb;
+        /* SKILLS LIST */
+        .skills li {
+            padding: 8px;
+            background: #e8eaf6;
+            margin-bottom: 8px;
+            border-left: 5px solid #3f51b5;
+            border-radius: 5px;
         }
 
-        a {
-            text-decoration: none;
-            color: #4b79a1;
-            font-weight: bold;
+        /* PROJECTS */
+        .project-box {
+            padding: 15px;
+            background: #e3f2fd;
+            border-left: 5px solid #1e88e5;
+            margin-bottom: 12px;
+            border-radius: 5px;
         }
 
-        a:hover {
-            color: #2c3e50;
+        /* IMAGE */
+        .profile-img {
+            width: 230px;
+            height: 230px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 5px solid #3f51b5;
         }
 
+        /* CONTACT */
+        .contact p {
+            font-size: 18px;
+        }
+
+        /* FOOTER */
         footer {
-            background: #4b79a1;
-            color: white;
-            padding: 10px;
             text-align: center;
-            margin-top: 30px;
-        }
-
-        /* Marquee styling */
-        marquee {
-            font-size: 28px;
-            font-weight: bold;
+            padding: 12px;
+            background: #283593;
+            color: white;
+            margin-top: 40px;
         }
     </style>
 </head>
 
 <body>
 
+<!-- NAVIGATION BAR -->
+<nav>
+    <a href="#">Home</a>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+</nav>
+
 <!-- HEADER -->
-<h1>
-    <marquee>Welcome to My Personal Website</marquee>
-</h1>
+<header>
+    <h1>Hello, I'm Sanket 👋</h1>
+    <p>Aspiring Web Developer | Learner | Tech Enthusiast</p>
+</header>
 
-<!-- INTRO -->
-<div class="section">
-    <h2 align="center">Hello, I'm Sanket 👋</h2>
-    <p align="center">Welcome to my homepage. This website is created using simple HTML and will keep growing as I learn more.</p>
-</div>
-
-<!-- ABOUT -->
-<div class="section">
-    <h2 align="center">About Me</h2>
+<!-- ABOUT SECTION -->
+<div class="section" id="about">
+    <h2>About Me</h2>
+    <center>
+        <img src="vk.jpg" class="profile-img">
+    </center>
     <p>
-        I am a learner exploring web development and programming.  
-        I enjoy creating simple websites, learning new technologies, and building useful things using HTML.  
-        This homepage is the starting point of my coding journey.
+        I'm Sanket, a beginner web developer who enjoys creating simple projects using HTML and CSS.  
+        I love learning new technologies, improving my problem-solving skills,  
+        and exploring how websites and applications work.
+        <br><br>
+        My goal is to grow into a full-stack developer and build modern, useful applications.
     </p>
 </div>
 
 <!-- SKILLS -->
-<div class="section">
-    <h2 align="center">My Skills</h2>
-
-    <table class="skills-table">
-        <tr>
-            <td valign="top">
-                <ul>
-                    <li>Basic HTML Web Development</li>
-                    <li>Writing Clean Code</li>
-                    <li>Creating Simple Projects</li>
-                </ul>
-            </td>
-
-            <td valign="top">
-                <ul>
-                    <li>Problem Solving</li>
-                    <li>Logical Thinking</li>
-                    <li>Understanding Technology</li>
-                </ul>
-            </td>
-        </tr>
-    </table>
+<div class="section" id="skills">
+    <h2>My Skills</h2>
+    <ul class="skills">
+        <li>HTML & Basic CSS</li>
+        <li>Responsive Web Design (Beginner)</li>
+        <li>Logical Thinking & Problem Solving</li>
+        <li>Basic Programming Concepts</li>
+        <li>Creating Simple Web Projects</li>
+    </ul>
 </div>
 
-<!-- IMAGE -->
-<div class="section" align="center">
-    <h2>My Photo / Favorite Image</h2>
-    <img src="vk.jpg" width="350" height="250">
+<!-- PROJECTS SECTION (NEW) -->
+<div class="section" id="projects">
+    <h2>My Projects</h2>
+
+    <div class="project-box">
+        <h3>🌐 Personal Website</h3>
+        <p>A simple website created using HTML and CSS to showcase my skills and journey.</p>
+    </div>
+
+    <div class="project-box">
+        <h3>📘 Student Info Page</h3>
+        <p>A basic webpage that displays student information using tables and lists.</p>
+    </div>
+
+    <div class="project-box">
+        <h3>📝 Mini Portfolio</h3>
+        <p>An early project built while learning layout designs and styling.</p>
+    </div>
 </div>
 
-<!-- INTERESTS -->
-<div class="section">
-    <h2 align="center">My Interests</h2>
-    <ol>
-        <li>Coding and Learning New Things</li>
-        <li>Technology & Gadgets</li>
-        <li>Sports and Music</li>
-        <li>Creating Projects</li>
-    </ol>
-</div>
-
-<!-- CONTACT -->
-<div class="section" align="center">
+<!-- CONTACT SECTION -->
+<div class="section contact" id="contact">
     <h2>Contact Me</h2>
-    <p>Email: example@gmail.com</p>
-    <p>Location: Nashik, India</p>
-</div>
-
-<!-- QUICK LINKS -->
-<div class="section" align="center">
-    <h2>Quick Links</h2>
-    <p><a href="about.html">About Page</a></p>
-    <p><a href="css.html">CSS Page</a></p>
+    <p><b>Email:</b> example@gmail.com</p>
+    <p><b>Location:</b> Nashik, India</p>
 </div>
 
 <!-- FOOTER -->
 <footer>
-    © 2025 Sanket | My Personal Website
+    © 2025 Sanket | Personal Portfolio Website
 </footer>
 
 </body>
 </html>
+
