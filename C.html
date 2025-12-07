@@ -1,94 +1,159 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>C Program Code</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>C Program - Loan Predictor</title>
 
-    <style>
-h2.{ 
-    font-family:Bell MT;
-    color:black;
-    pading:15px;
-}
-        p {
-            background-color: black;
-            color: white;
+<style>
+    /* Body styling */
+    body {
+        margin: 0;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background: linear-gradient(120deg, #e0f7fa, #80deea);
+        color: #333;
+    }
+
+    /* Container for content */
+    .container {
+        max-width: 900px;
+        margin: 40px auto;
+        padding: 20px;
+    }
+
+    /* Header styling */
+    h2 {
+        text-align: center;
+        background: linear-gradient(90deg, #4fc3f7, #0288d1);
+        color: #fff;
+        padding: 20px;
+        border-radius: 12px;
+        box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+        font-family: 'Bell MT', serif;
+        margin-bottom: 30px;
+    }
+
+    /* Code block styling */
+    .code-block {
+        background-color: #1e1e2f;
+        color: #d4d4d4;
+        padding: 25px;
+        border-radius: 12px;
+        font-family: 'Courier New', monospace;
+        line-height: 1.6;
+        box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+        overflow-x: auto;
+        white-space: pre;
+    }
+
+    /* Syntax highlighting */
+    .keyword { color: #569CD6; font-weight: bold; }
+    .type { color: #4EC9B0; font-weight: bold; }
+    .number { color: #B5CEA8; }
+    .string { color: #D69D85; }
+    .comment { color: #6A9955; font-style: italic; }
+
+    /* Button styling */
+    .btn {
+        display: inline-block;
+        margin: 30px auto;
+        padding: 15px 30px;
+        background: linear-gradient(90deg, #4fc3f7, #0288d1);
+        color: white;
+        font-weight: bold;
+        text-decoration: none;
+        border-radius: 10px;
+        text-align: center;
+        transition: 0.3s ease;
+        box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+    }
+
+    .btn:hover {
+        background: linear-gradient(90deg, #0288d1, #4fc3f7);
+        transform: translateY(-3px);
+    }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+        h2, .code-block, .btn {
+            width: 95%;
             padding: 15px;
-            font-family: monospace;
-            white-space: pre; /* keeps formatting */
         }
-    </style>
-
+    }
+</style>
 </head>
 <body>
 
-<h2>C PROGRAM  OF THE  LOAN PREDICTOR WHICH I MADE FOR CFP PRESENNTATION.</h2>
+<div class="container">
+    <h2>Loan Predictor C Program (CFP Presentation)</h2>
 
-
-<p>
-
-#include &lt;stdio.h&gt;
-int main()
+    <div class="code-block">
+<span class="comment">#include &lt;stdio.h&gt;</span>
+<span class="type">int</span> main()
 {
-    float salary, expenses;
-    int age, creditScore;
-    int riskLevel;
+    <span class="type">float</span> salary, expenses;
+    <span class="type">int</span> age, creditScore;
+    <span class="type">int</span> riskLevel;
 
-    printf("Enter your monthly salary: ");
-    scanf("%f", &salary);
+    <span class="keyword">printf</span>(<span class="string">"Enter your monthly salary: "</span>);
+    <span class="keyword">scanf</span>(<span class="string">"%f"</span>, &salary);
 
-    printf("Enter your monthly expenses: ");
-    scanf("%f", &expenses);
+    <span class="keyword">printf</span>(<span class="string">"Enter your monthly expenses: "</span>);
+    <span class="keyword">scanf</span>(<span class="string">"%f"</span>, &expenses);
 
-    printf("Enter your age: ");
-    scanf("%d", &age);
+    <span class="keyword">printf</span>(<span class="string">"Enter your age: "</span>);
+    <span class="keyword">scanf</span>(<span class="string">"%d"</span>, &age);
 
-    printf("Enter your credit score (300 - 900): ");
-    scanf("%d", &creditScore);
+    <span class="keyword">printf</span>(<span class="string">"Enter your credit score (300 - 900): "</span>);
+    <span class="keyword">scanf</span>(<span class="string">"%d"</span>, &creditScore);
 
-    float savings = salary - expenses;
+    <span class="type">float</span> savings = salary - expenses;
 
-    if (creditScore &lt; 500) {
+    <span class="keyword">if</span> (creditScore &lt; 500) {
         riskLevel = 3;
     }
-    else if (creditScore &gt;= 500 && creditScore &lt; 700) {
-        if (savings &lt; (0.2 * salary)) {
+    <span class="keyword">else if</span> (creditScore &gt;= 500 &amp;&amp; creditScore &lt; 700) {
+        <span class="keyword">if</span> (savings &lt; (0.2 * salary)) {
             riskLevel = 3;
-        } else {
+        } <span class="keyword">else</span> {
             riskLevel = 2;
         }
     }
-    else if (creditScore &gt;= 700) {
-        if (savings &gt;= (0.3 * salary) && age &gt;= 21 && age &lt;= 60)
+    <span class="keyword">else if</span> (creditScore &gt;= 700) {
+        <span class="keyword">if</span> (savings &gt;= (0.3 * salary) &amp;&amp; age &gt;= 21 &amp;&amp; age &lt;= 60)
             riskLevel = 1;
-        else
+        <span class="keyword">else</span>
             riskLevel = 2;
     }
 
-    printf("\n------ Result ------\n");
+    <span class="keyword">printf</span>(<span class="string">"\n------ Result ------\n"</span>);
 
-    switch (riskLevel) {
-        case 1:
-            printf("Loan Risk Level: LOW\n");
-            printf("Reason: Good credit score, stable savings, and eligible age.\n");
-        break;
+    <span class="keyword">switch</span> (riskLevel) {
+        <span class="keyword">case</span> 1:
+            <span class="keyword">printf</span>(<span class="string">"Loan Risk Level: LOW\n"</span>);
+            <span class="keyword">printf</span>(<span class="string">"Reason: Good credit score, stable savings, and eligible age.\n"</span>);
+        <span class="keyword">break</span>;
 
-        case 2:
-            printf("Loan Risk Level: MEDIUM\n");
-            printf("Reason: Moderate credit score or low savings.\n");
-        break;
+        <span class="keyword">case</span> 2:
+            <span class="keyword">printf</span>(<span class="string">"Loan Risk Level: MEDIUM\n"</span>);
+            <span class="keyword">printf</span>(<span class="string">"Reason: Moderate credit score or low savings.\n"</span>);
+        <span class="keyword">break</span>;
 
-        case 3:
-            printf("Loan Risk Level: HIGH\n");
-            printf("Reason: Low credit score or insufficient savings.\n");
-        break;
+        <span class="keyword">case</span> 3:
+            <span class="keyword">printf</span>(<span class="string">"Loan Risk Level: HIGH\n"</span>);
+            <span class="keyword">printf</span>(<span class="string">"Reason: Low credit score or insufficient savings.\n"</span>);
+        <span class="keyword">break</span>;
 
-        default:
-            printf("Error: Invalid risk level.\n");
+        <span class="keyword">default</span>:
+            <span class="keyword">printf</span>(<span class="string">"Error: Invalid risk level.\n"</span>);
     }
 
-    return 0;
+    <span class="keyword">return</span> 0;
 }
-</p>
-<a href="https://www.onlinegdb.com/tTk8fF75iG">Click Here</a>
+    </div>
+
+    <a class="btn" href="https://www.onlinegdb.com/tTk8fF75iG" target="_blank">Run this Code Online</a>
+</div>
+
 </body>
 </html>
