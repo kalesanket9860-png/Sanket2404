@@ -1,94 +1,77 @@
-<!DOCTYPE html>
+\<!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
 <title>PPT Files</title>
 
 <style>
-    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
-
     body {
         margin: 0;
-        font-family: 'Poppins', sans-serif;
-        background: linear-gradient(135deg, #1e3c72, #2a5298);
+        font-family: Arial, sans-serif;
+        background: linear-gradient(135deg, #2b5876, #4e4376);
         height: 100vh;
         display: flex;
         justify-content: center;
         align-items: center;
     }
 
-    .container {
-        width: 360px;
-        padding: 30px;
+    .box {
+        width: 380px;
+        padding: 35px;
         text-align: center;
-        backdrop-filter: blur(12px);
-        background: rgba(255, 255, 255, 0.1);
-        border-radius: 20px;
-        box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.4);
-        border: 1px solid rgba(255, 255, 255, 0.3);
-        animation: fadeIn 1s ease;
-    }
-
-    @keyframes fadeIn {
-        from { opacity: 0; transform: translateY(20px); }
-        to { opacity: 1; transform: translateY(0px); }
+        background: rgba(255, 255, 255, 0.12);
+        border-radius: 18px;
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.25);
+        box-shadow: 0px 8px 30px rgba(0,0,0,0.4);
     }
 
     h1 {
         color: white;
         font-size: 30px;
-        margin-bottom: 25px;
-        font-weight: 600;
         letter-spacing: 1px;
+        margin-bottom: 25px;
+        font-weight: bold;
     }
 
     .ppt-btn {
-        display: block;
         width: 100%;
         padding: 14px;
         margin: 12px 0;
         font-size: 18px;
-        font-weight: 600;
-        color: #fff;
-        background: linear-gradient(45deg, #ff512f, #dd2476);
+        font-weight: bold;
+        color: white;
+        background: linear-gradient(45deg, #ff9966, #ff5e62);
         border: none;
         border-radius: 30px;
         cursor: pointer;
-        box-shadow: 0px 4px 15px rgba(0,0,0,0.3);
+        box-shadow: 0px 5px 15px rgba(0,0,0,0.35);
         transition: 0.3s;
     }
 
     .ppt-btn:hover {
-        transform: scale(1.07);
-        box-shadow: 0px 6px 18px rgba(0,0,0,0.4);
+        transform: scale(1.08);
+        box-shadow: 0px 7px 20px rgba(0,0,0,0.45);
+        opacity: 0.9;
     }
 
-    /* Glow animation border */
-    .ppt-btn::after {
-        content: "";
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        top: 0;
-        left: 0;
-        border-radius: 30px;
-        z-index: -1;
-        filter: blur(10px);
+    a { 
+        text-decoration: none;
     }
 </style>
 </head>
 
 <body>
 
-<div class="container">
+<div class="box">
     <h1>📊 PPT Files</h1>
 
     <a href="https://docs.google.com/presentation/d/1slK23gc_akqKdZgSunt72E8K5o2HxVQ5/edit?slide=id.p1#slide=id.p1" target="_blank">
-        <button class="ppt-btn">📂 E WASTE</button>
+        <button class="ppt-btn">📂 E-Waste Presentation</button>
     </a>
 
     <a href="https://docs.google.com/presentation/d/1V-vY4l9RPA1Yuz5Nb1KVS96RIYUDRvsS/edit?slide=id.p1#slide=id.p1" target="_blank">
-        <button class="ppt-btn">📂 CFP PRESENTATION</button>
+        <button class="ppt-btn">📂 CFP Presentation</button>
     </a>
 </div>
 
