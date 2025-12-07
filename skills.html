@@ -1,0 +1,187 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Skills - Sanket</title>
+
+<style>
+:root {
+    --accent: #d32f2f;
+    --accent-dark: #a02727;
+    --text: #222;
+}
+
+/* Page Background with Uploaded Image */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-image: url('/mnt/data/download.jpeg'); /* Your uploaded image */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    position: relative;
+}
+
+/* Overlay for readability */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255,255,255,0.35); /* Semi-transparent white overlay */
+    z-index: -1;
+}
+
+/* Navigation */
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    gap: 18px;
+    padding: 16px 20px;
+    background: rgba(255,255,255,0.5);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid rgba(255,255,255,0.6);
+    border-radius: 0 0 12px 12px;
+    font-size: 18px;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--text);
+    padding: 8px 14px;
+    border-radius: 10px;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+nav a:hover {
+    background: rgba(211,47,47,0.9);
+    color: #fff;
+    transform: translateY(-2px);
+}
+
+/* Container */
+.container {
+    max-width: 1100px;
+    margin: 30px auto;
+    padding: 0 15px;
+}
+
+h2 {
+    text-align: center;
+    color: var(--text);
+    font-size: 32px;
+    margin-bottom: 40px;
+}
+
+/* Skills Grid */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+/* Skill Card */
+.skill-card {
+    background: rgba(255,255,255,0.9);
+    border-radius: 20px;
+    padding: 40px 20px 30px 20px;
+    text-align: center;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 16px 40px rgba(0,0,0,0.12);
+}
+
+/* Icon */
+.skill-card .icon {
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+
+/* Skill Title */
+.skill-card h3 {
+    margin: 0 0 20px 0;
+    font-size: 22px;
+    color: #333;
+}
+
+/* Button */
+.skill-card .btn {
+    display: inline-block;
+    padding: 12px 25px;
+    background: linear-gradient(45deg, var(--accent), var(--accent-dark));
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 12px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.skill-card .btn:hover {
+    background: linear-gradient(45deg, var(--accent-dark), var(--accent));
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 8px 25px rgba(211,47,47,0.3);
+}
+
+/* Responsive */
+@media(max-width:640px){
+    .skill-card{padding:30px 15px;}
+    h2{font-size:26px;}
+}
+</style>
+</head>
+
+<body>
+
+<!-- Navigation -->
+<nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="skills.html">Skills</a>
+    <a href="contact.html">Contact</a>
+</nav>
+
+<div class="container">
+    <h2>My Skills</h2>
+
+    <div class="skills-grid">
+
+        <!-- C Programming -->
+        <div class="skill-card">
+            <div class="icon">💻</div>
+            <h3>C Programming</h3>
+            <a href="c.html" class="btn">Learn More</a>
+        </div>
+
+        <!-- MS Office -->
+        <div class="skill-card">
+            <div class="icon">🖥️</div>
+            <h3>MS Office</h3>
+            <a href="msoffice.html" class="btn">Learn More</a>
+        </div>
+
+        <!-- Web Development -->
+        <div class="skill-card">
+            <div class="icon">🌐</div>
+            <h3>Web Development</h3>
+            <a href="webdev.html" class="btn">Learn More</a>
+        </div>
+
+    </div>
+</div>
+
+</body>
+</html>
