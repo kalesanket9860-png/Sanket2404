@@ -1,50 +1,100 @@
+
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>About Me</title>
     <style>
-        body {
-            margin: 0; 
-            font-family: Arial, sans-serif;
-            background: #f4f4f4;
+        /* page base */
+        :root{
+            --glass-bg: rgba(255,255,255,0.45); /* semi-transparent fallback */
+            --accent: #d32f2f;
+            --text: #222;
+        }
+        html,body{height:100%; margin:0; font-family:Arial, sans-serif; background:
+            linear-gradient(120deg,#e6eef6 0%, #f7f3f9 50%, #efeefc 100%);
+            -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;
         }
 
+        /* GLASS EFFECT NAV */
         nav {
-            background: #ffffff;
-            padding: 15px;
-            text-align: center;
-            border-bottom: 2px solid #ddd;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            display:flex;
+            justify-content:center;
+            gap:18px;
+            padding:16px 20px;
+            font-size:18px;
+
+            /* semi-transparent fallback color */
+            background: var(--glass-bg);
+            border-bottom: 1px solid rgba(255,255,255,0.6);
+            /* glass blur (preferred) */
+            -webkit-backdrop-filter: blur(8px) saturate(120%);
+                    backdrop-filter: blur(8px) saturate(120%);
+            box-shadow: 0 6px 18px rgba(20,20,30,0.06);
+            border-radius: 0 0 12px 12px;
+            margin: 10px 24px;
         }
 
-        /* Removed all CSS for nav a (as you said) */
-
-        .section {
-            padding: 50px;
-            text-align: center;
+        /* nav links (kept simple but visible) */
+        nav a{
+            text-decoration: none;
+            color: var(--text);
+            padding:8px 14px;
+            border-radius:10px;
+            transition: all .18s ease;
+            font-weight:600;
         }
 
-        .card {
-            background: white;
-            width: 70%;
-            margin: auto;
-            padding: 25px;
-            border-radius: 12px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-            text-align: left;
+        nav a:focus, nav a:hover{
+            background: rgba(211,47,47,0.9);
+            color: #fff;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 14px rgba(211,47,47,0.18);
         }
 
-        h2 {
-            text-align: center;
-            color: #333;
+        /* main layout */
+        .container{ width: min(1100px, 92%); margin: 28px auto; }
+
+        .section{
+            padding: 32px 18px;
+            display:flex;
+            justify-content:center;
         }
 
-        ul {
-            line-height: 1.8;
+        .card{
+            width:100%;
+            background: #fff;
+            border-radius:16px;
+            padding:36px;
+            box-shadow: 0 8px 30px rgba(30,30,50,0.06);
+            animation: fadeIn .7s ease;
         }
+
+        h2{ text-align:center; color:var(--text); font-size:30px; margin-top:0; }
+
+        .info{ font-size:17px; line-height:1.75; color:#3a3a3a; }
+
+        ul{ padding-left:22px; margin-top:8px; }
+        li{ margin-bottom:8px; }
+
+        @keyframes fadeIn{ from{opacity:0; transform: translateY(10px)} to{opacity:1; transform:none} }
+
+        /* small screens */
+        @media (max-width:640px){
+            nav{ gap:10px; padding:12px; margin:8px 10px; }
+            .card{ padding:20px; border-radius:12px; }
+            h2{ font-size:24px; }
+        }
+
     </style>
 </head>
 <body>
 
+<!-- Navigation -->
 <nav>
     <a href="index.html">Home</a>
     <a href="about.html">About</a>
@@ -52,6 +102,39 @@
     <a href="contact.html">Contact</a>
 </nav>
 
-<div class="section">
-    <div class="card">
-        <h2>About Me</h2>
+<div class="container">
+    <!-- About Section -->
+    <div class="section">
+        <div class="card">
+            <h2>About Me</h2>
+
+            <div class="info">
+                <p><strong>Name:</strong> Sanket Chandrakant Kale</p>
+
+                <p><strong>Currently Studying:</strong><br>
+                Electrical Engineering at Sanjivani College of Engineering</p>
+
+                <p><strong>Education:</strong></p>
+                <ul>
+                    <li>SSC – 90.40%</li>
+                    <li>HSC – 74.67%</li>
+                </ul>
+
+                <p><strong>Hobbies:</strong></p>
+                <ul>
+                    <li>Cooking</li>
+                    <li>Cricket</li>
+                    <li>Learning new technologies</li>
+                    <li>Exploring software tools</li>
+                </ul>
+
+                <p><strong>Address:</strong><br>
+                Shramik Nagar, Nashik</p>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
