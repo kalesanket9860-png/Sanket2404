@@ -4,6 +4,10 @@
     <title>Sanket | Personal Website</title>
 
     <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
             margin: 0;
             font-family: Arial, sans-serif;
@@ -15,6 +19,10 @@
             background: #283593;
             padding: 15px;
             text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 5px #ccc;
         }
 
         nav a {
@@ -23,60 +31,48 @@
             text-decoration: none;
             font-size: 18px;
             font-weight: bold;
+            transition: 0.3s;
         }
 
         nav a:hover {
             color: #ffeb3b;
+            letter-spacing: 1px;
         }
 
         /* HEADER SECTION */
         header {
-            background: linear-gradient(#3f51b5, #1a237e);
+            background: linear-gradient(120deg, #3f51b5, #1a237e);
             color: white;
-            padding: 60px 20px;
+            padding: 70px 20px;
             text-align: center;
+            border-bottom-left-radius: 50px;
+            border-bottom-right-radius: 50px;
         }
 
         header h1 {
             margin: 0;
-            font-size: 40px;
+            font-size: 42px;
+            letter-spacing: 1px;
         }
 
         header p {
             font-size: 20px;
-            opacity: 0.9;
+            opacity: 0.95;
         }
 
         /* CONTENT SECTIONS */
         .section {
             width: 80%;
-            margin: 30px auto;
+            margin: 40px auto;
             background: white;
-            padding: 25px;
+            padding: 30px;
             border-radius: 12px;
             box-shadow: 0 0 12px #d3d3d3;
         }
 
         h2 {
             color: #283593;
-        }
-
-        /* SKILLS LIST */
-        .skills li {
-            padding: 8px;
-            background: #e8eaf6;
-            margin-bottom: 8px;
-            border-left: 5px solid #3f51b5;
-            border-radius: 5px;
-        }
-
-        /* PROJECTS */
-        .project-box {
-            padding: 15px;
-            background: #e3f2fd;
-            border-left: 5px solid #1e88e5;
-            margin-bottom: 12px;
-            border-radius: 5px;
+            margin-top: 0;
         }
 
         /* IMAGE */
@@ -86,6 +82,40 @@
             object-fit: cover;
             border-radius: 50%;
             border: 5px solid #3f51b5;
+            transition: 0.4s;
+        }
+
+        .profile-img:hover {
+            transform: scale(1.05);
+        }
+
+        /* SKILLS LIST */
+        .skills li {
+            padding: 10px;
+            background: #e8eaf6;
+            margin-bottom: 8px;
+            border-left: 5px solid #3f51b5;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+
+        .skills li:hover {
+            background: #d1d9ff;
+            transform: translateX(4px);
+        }
+
+        /* PROJECTS */
+        .project-box {
+            padding: 15px;
+            background: #e3f2fd;
+            border-left: 5px solid #1e88e5;
+            margin-bottom: 12px;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+
+        .project-box:hover {
+            background: #bbdefb;
         }
 
         /* CONTACT */
@@ -96,7 +126,7 @@
         /* FOOTER */
         footer {
             text-align: center;
-            padding: 12px;
+            padding: 15px;
             background: #283593;
             color: white;
             margin-top: 40px;
@@ -128,8 +158,8 @@
         <img src="sankets.jpg" class="profile-img">
     </center>
     <p>
-        I'm Sanket, a beginner web developer who enjoys creating simple projects using HTML and CSS.  
-        I love learning new technologies, improving my problem-solving skills,  
+        I'm Sanket, a beginner web developer who enjoys creating simple projects using HTML and CSS.
+        I love learning new technologies, improving my problem-solving skills,
         and exploring how websites and applications work.
         <br><br>
         My goal is to grow into a full-stack developer and build modern, useful applications.
@@ -148,7 +178,7 @@
     </ul>
 </div>
 
-<!-- PROJECTS SECTION (NEW) -->
+<!-- PROJECTS SECTION -->
 <div class="section" id="projects">
     <h2>My Projects</h2>
 
@@ -178,9 +208,4 @@
 <!-- FOOTER -->
 <footer>
     © 2025 Sanket | Personal Portfolio Website
-</footer>
-
-</body>
-</html>
-
-
+</f
