@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Space2K25 - Project Showcase</title>
+
+<style>
+/* -------------------------------------------------
+   GENERAL PAGE STYLE
+------------------------------------------------- */
+body {
+    margin: 0;
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: linear-gradient(to bottom, #0a1833, #102542);
+    color: #f4f4f4;
+}
+
+/* -------------------------------------------------
+   HEADER
+------------------------------------------------- */
+header {
+    background: rgba(0, 0, 0, 0.4);
+    padding: 40px 20px;
+    text-align: center;
+    backdrop-filter: blur(5px);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 42px;
+    letter-spacing: 1px;
+}
+
+/* -------------------------------------------------
+   CONTAINER & SECTIONS
+------------------------------------------------- */
+.container {
+    width: 85%;
+    margin: 30px auto;
+}
+
+.section {
+    background: rgba(255, 255, 255, 0.08);
+    padding: 25px;
+    margin-bottom: 30px;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.3);
+    backdrop-filter: blur(6px);
+}
+
+h2 {
+    margin-top: 0;
+    color: #00d4ff;
+    font-size: 26px;
+    border-left: 5px solid #00d4ff;
+    padding-left: 10px;
+}
+
+.section p {
+    line-height: 1.6;
+    font-size: 16px;
+    color: #e3e3e3;
+}
+
+/* -------------------------------------------------
+   GALLERY
+------------------------------------------------- */
+.gallery {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.gallery img {
+    width: 32%;
+    border-radius: 10px;
+    margin-top: 15px;
+    transition: 0.4s;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+.gallery img:hover {
+    transform: scale(1.05);
+}
+
+/* -------------------------------------------------
+   VIDEO
+------------------------------------------------- */
+video {
+    width: 100%;
+    border-radius: 12px;
+    margin-top: 15px;
+    box-shadow: 0 0 12px rgba(0,0,0,0.6);
+}
+
+/* -------------------------------------------------
+   TEAM MEMBERS
+------------------------------------------------- */
+.team-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.member-card {
+    flex: 1 1 220px;
+    max-width: 250px;
+    background: rgba(255, 255, 255, 0.10);
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+    margin-top: 20px;
+    box-shadow: 0 0 12px rgba(0,0,0,0.4);
+    transition: 0.3s;
+}
+
+.member-card:hover {
+    transform: scale(1.05);
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.member-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+.member-card h3 {
+    margin-top: 15px;
+    font-size: 20px;
+    color: #00d4ff;
+}
+
+.member-card p {
+    font-size: 14px;
+    color: #e3e3e3;
+}
+
+/* -------------------------------------------------
+   FOOTER
+------------------------------------------------- */
+footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    color: #dddddd;
+    font-size: 14px;
+}
+
+/* -------------------------------------------------
+   RESPONSIVE BREAKPOINTS
+------------------------------------------------- */
+@media screen and (max-width: 900px) {
+    .gallery img {
+        width: 48%;
+        margin-bottom: 15px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .gallery img {
+        width: 100%;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>SPACE2K25 PROJECT SHOWCASE</h1>
+</header>
+
+<div class="container">
+
+    <!-- -------------------------------------------------
+         WINNING PHOTOS
+    ------------------------------------------------- -->
+    <div class="section">
+        <h2>Winning Moments</h2>
+        <p>Celebrating our 1st prize achievement in the Space2K25 project!</p>
+
+        <div class="gallery">
+            <img src="sanket1.jpg" alt="Winning Photo 1">
+            <img src="sanket2.jpg" alt="Winning Photo 2">
+            <img src="sanket3.jpg" alt="Winning Photo 3">
+                    </div>
+    </div>
+
+    <!-- -------------------------------------------------
+         VIDEO SECTION
+    ------------------------------------------------- -->
+    <div class="section">
+        <h2>Random Memories</h2>
+       <p> Working with team </p>
+        <div style="
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            border-radius: 12px;
+            box-shadow: 0 0 12px rgba(0,0,0,0.6);
+            margin-top: 15px;
+        ">
+            <video controls style="
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                border-radius: 12px;
+            ">
+                <source src="video1.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </div>
+
+    <!-- -------------------------------------------------
+         TEAM MEMBERS
+    ------------------------------------------------- -->
+    <div class="section">
+        <h2>Team Members</h2>
+        <p>Meet our dedicated project team who contributed to Space2K25.</p>
+
+        <div class="team-container">
+
+            <div class="member-card">
+                <img src="bablu1.jpg" alt="Member 1">
+                <h3>BABLU.S.BORNARE </h3>
+                <p>Role: Communicator & Model Design<br>Speciality:Articulation</p>
+            </div>
+
+            <div class="member-card">
+                <img src="sangha.jpg" alt="Member 2">
+                <h3>SANGHRAJ.R.WAGH </h3>
+                <p>Role: Media Cordinator<br>Speciality: Visuals</p>
+            </div>
+
+            <div class="member-card">
+                <img src="om" alt="Member 3">
+                <h3>om lasure </h3>
+                <p>Role:Researcher<br>Speciality: Exploration</p>
+            </div>
+
+            <div class="member-card">
+                <img src="SANKET5.jpg" alt="Member 4">
+                <h3>SANKET.C.KALE </h3>
+                <p>Role:Content and Presentation Lead<br>Speciality:Creativity </p>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- -------------------------------------------------
+         EXPERIENCE SECTION
+    ------------------------------------------------- -->
+    <div class="section">
+        <h2>My Experience</h2>
+        <p>
+            Working on the Space2K25 project was a valuable learning journey that strengthened both my scientific understanding and creative thinking. As a content and presentation team member, I was responsible for researching concepts, preparing clear explanations, and presenting the ideas effectively to the audience.
+This role improved my communication skills, boosted my confidence, and taught me how to work collaboratively within a team.
+The project also helped me develop problem-solving abilities, organizational skills, and a professional approach to planning and delivering presentations. Overall, the experience inspired me to explore more opportunities in science, technology, and innovation.        </p>
+    </div>
+
+</div>
+
+<footer>
+    © 2025 Space2K25 | Designed by Sanket
+</footer>
+
+</body>
+</html>
